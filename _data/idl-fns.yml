@@ -1,0 +1,1849 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+#
+# IDL functions documentation.
+#
+
+fn-token:
+  - name: tok_id
+    sig: |
+      <b>tok_id</b>(t: Token<em><sub>opt</sub></em>) ⇒ String, # ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getId()">token ID</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getId()">token ID</a>
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>. Note that this
+      functions has a special shorthand <code><b>#</b></code>.
+    usage: |
+      // Result: 'true' if the current token ID is equal to 'my_id'.
+      tok_id == 'my_id'
+      # == 'my_id'
+      tok_id(tok_this) == 'my_id'
+      #(tok_this) == 'my_id'
+
+  - name: tok_lemma
+    sig: |
+      <b>tok_lemma</b>(t: Token<em><sub>opt</sub></em>) ⇒ String
+    synopsis: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getLemma()">token lemma</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getLemma()">token lemma</a>
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: 'true' if the current token lemma is equal to 'work'.
+      tok_lemma == 'work'
+      tok_lemma(tok_this) == 'work'
+
+  - name: tok_stem
+    sig: |
+      <b>tok_stem</b>(t: Token<em><sub>opt</sub></em>) ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getStem()">token stem</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getStem()">token stem</a>
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: 'true' if the current token stem is equal to 'work'.
+      tok_stem == 'work'
+      tok_stem(tok_this) == 'work'
+
+  - name: tok_pos
+    sig: |
+      <b>tok_pos</b>(t: Token<em><sub>opt</sub></em>) ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getPos()">token PoS</a> tag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getPos()">token PoS</a> tag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: 'true' if the current token PoS tag is equal to 'NN'.
+      tok_pos == 'NN'
+      tok_pos(tok_this) == 'NN'
+
+  - name: tok_sparsity
+    sig: |
+      <b>tok_sparsity</b>(t: Token<em><sub>opt</sub></em>) ⇒ Long
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getSparsity()">token sparsity</a> value
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getSparsity()">token sparsity</a> value
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token sparsity value.
+      tok_sparsity
+      tok_sparsity(tok_this)
+
+  - name: tok_unid
+    sig: |
+      <b>tok_unid</b>(t: Token<em><sub>opt</sub></em>) ⇒ String
+    synopsis: Returns internal <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getUnid()">token globally unique ID</a>
+    desc: |
+      Returns internal <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getUnid()">token globally unique ID</a>
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: internal token globally unique ID.
+      tok_unid
+      tok_unid(tok_this)
+
+  - name: tok_is_abstract
+    sig: |
+      <b>tok_is_abstract</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isAbstract()">token abstract</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isAbstract()">token abstract</a> flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token abstract flag.
+      tok_is_abstract
+      tok_is_abstract(tok_this)
+
+  - name: tok_is_bracketed
+    sig: |
+      <b>tok_is_bracketed</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isBracketed()">token bracketed</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isBracketed()">token bracketed</a> flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token bracketed flag.
+      tok_is_bracketed
+      tok_is_bracketed(tok_this)
+
+  - name: tok_is_direct
+    sig: |
+      <b>tok_is_direct</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isDirect()">token direct</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isDirect()">token direct</a> flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token direct flag.
+      tok_is_direct
+      tok_is_direct(tok_this)
+
+  - name: tok_is_permutated
+    sig: |
+      <b>tok_is_permutated</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isPermutated()">token permutated</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isPermutated()">token permutated</a> flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token permutated flag.
+      tok_is_permutated
+      tok_is_permutated(tok_this)
+
+  - name: tok_is_english
+    sig: |
+      <b>tok_is_english</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isEnglish()">token English</a> detection flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isEnglish()">token English</a> detection flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token English detection flag.
+      tok_is_english
+      tok_is_english(tok_this)
+
+  - name: tok_is_freeword
+    sig: |
+      <b>tok_is_freeword</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isFreeWord()">token freeword</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isFreeWord()">token freeword</a> flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token freeword flag.
+      tok_is_freeword
+      tok_is_freeword(tok_this)
+
+  - name: tok_is_quoted
+    sig: |
+      <b>tok_is_quoted</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isQuoted()">token quoted</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isQuoted()">token quoted</a> flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token quoted flag.
+      tok_is_quoted
+      tok_is_quoted(tok_this)
+
+  - name: tok_is_stopword
+    sig: |
+      <b>tok_is_stopword</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isStopWord()">token stopword</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isStopWord()">token stopword</a> flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token stopword flag.
+      tok_is_stopword
+      tok_is_stopword(tok_this)
+
+  - name: tok_is_swear
+    sig: |
+      <b>tok_is_swear</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isSwearWord()">token swear word</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isSwearWord()">token swear word</a> flag
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: token swear flag.
+      tok_is_swear
+      tok_is_swear(tok_this)
+
+  - name: tok_is_user
+    sig: |
+      <b>tok_is_user</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns if this token is <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isUserDefined()">user-defined</a>
+    desc: |
+      Returns if this token is defined by <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isUserDefined()">user-defined</a> model element or a built-in element
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: wether or not this is defined by user model element vs. built-in,
+      tok_is_user
+      tok_is_user(tok_this)
+
+  - name: tok_is_wordnet
+    sig: |
+      <b>tok_is_wordnet</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns if this token is part of <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isWordnet()">WordNet</a> dictionary
+    desc: |
+      Returns if this token's text is a known part of <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#isWordnet()">WordNet</a> dictionary
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>.
+    usage: |
+      // Result: whether or not this token is part of WordNet dictionary.
+      tok_is_wordnet
+      tok_is_wordnet(tok_this)
+
+  - name: tok_ancestors
+    sig: |
+      <b>tok_ancestors</b>(t: Token<em><sub>opt</sub></em>) ⇒ List[String]
+    synopsis: Gets the <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getAncestors()">list of all parent IDs</a> for this token
+    desc: |
+      Gets the <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getAncestors()">list of all parent IDs</a>
+      for the current token (default) or the provided one by the optional paremeter <code><b>t</b></code> up to the root.
+      This only available for user-defined model elements - built-in tokens do not have parents and will return an empty list.
+      May return an empty list but never a <code>null</code>.
+    usage: |
+      // Result: list of all ancestors.
+      tok_ancestors
+      tok_ancestors(tok_this)
+
+  - name: tok_parent
+    sig: |
+      <b>tok_parent</b>(t: Token<em><sub>opt</sub></em>) ⇒ String
+    synopsis: Gets optional <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getParentId()">parent ID</a> for this token
+    desc: |
+      Gets the optional <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getParentId()">parent ID</a> of the
+      model element the current token (default) or the provided one by the optional paremeter <code><b>t</b></code>
+      represents. This only available for user-defined model elements - built-in tokens do not have parents and
+      this will return <code>null</code>.
+    usage: |
+      // Result: list of all ancestors.
+      tok_parent
+      tok_parent(tok_this)
+
+  - name: tok_groups
+    sig: |
+      <b>tok_groups</b>(t: Token<em><sub>opt</sub></em>) ⇒ List[String]
+    synopsis: Gets the list of <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getGroups()">groups</a> this token belongs to
+    desc: |
+      Gets the list of <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getGroups()">groups</a>
+      the current token (default) or the provided one by the optional paremeter <code><b>t</b></code> belongs to. Note that,
+      by default, if not specified explicitly, token always belongs to one group with ID equal to token ID.
+      May return an empty list but never a <code>null</code>.
+    usage: |
+      // Result: list of groups this token belongs to.
+      tok_groups
+      tok_groups(tok_this)
+
+  - name: tok_value
+    sig: |
+      <b>tok_value</b>(t: Token<em><sub>opt</sub></em>) ⇒ String
+    synopsis: Gets the <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getValue()">value</a> if this token was detected via element's value
+    desc: |
+      Gets the <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getValue()">value</a> if
+      the current token (default) or the provided one by the optional paremeter <code><b>t</b></code> was detected via
+      element's value (or its synonyms). Otherwise returns <code>null</code>. Only applicable for user-defined
+      model elements - built-in tokens do not have values and it will return <code>null</code>.
+    usage: |
+      // Result: the token value if this token was detected via element's value
+      tok_value
+      tok_value(tok_this)
+
+  - name: tok_aliases
+    sig: |
+      <b>tok_aliases</b>(t: Token<em><sub>opt</sub></em>) ⇒ List[String]
+    synopsis: Gets optional <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getAliases()">list of aliases</a> this token is known by
+    desc: |
+      Gets optional <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getAliases()">list of aliases</a>
+      the current token (default) or the provided one by the optional paremeter <code><b>t</b></code> is known by. Token can get an alias if it is a part of
+      other composed token and IDL expression that was used to match it specified an alias. Note
+      that token can have zero, one or more aliases. May return an empty list but never a <code>null</code>.
+    usage: |
+      // Result: checks if this token is known by 'alias' alias.
+      has(tok_aliases, 'alias')
+      has(tok_aliases(tok_this), 'alias')
+
+  - name: tok_start_idx
+    sig: |
+      <b>tok_start_idx</b>(t: Token<em><sub>opt</sub></em>) ⇒ Long
+    synopsis: Gets <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getStartCharIndex()">start character index</a> of this token in the original text
+    desc: |
+      Gets <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getStartCharIndex()">start character index</a>
+      of the current token (default) or the provided one by the optional paremeter <code><b>t</b></code> in the original text.
+    usage: |
+      // Result: start character index of this token in the original text.
+      tok_start_idx
+      tok_start_idx(tok_this)
+
+  - name: tok_end_idx
+    sig: |
+      <b>tok_end_idx</b>(t: Token<em><sub>opt</sub></em>) ⇒ Long
+    synopsis: Gets <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getEndCharIndex()">end character index</a> of this token in the original text
+    desc: |
+      Gets <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getEndCharIndex()">end character index</a>
+      of the current token (default) or the provided one by the optional paremeter <code><b>t</b></code> in the original text.
+      If <code>t</code> is not provided the current token is assumed.
+    usage: |
+      // Result: end character index of this token in the original text.
+      tok_end_idx
+      tok_end_idx(tok_this)
+
+  - name: tok_this
+    sig: |
+      <b>tok_this</b> ⇒ Token
+    synopsis: Returns current token.
+    desc: |
+      Returns current token.
+    usage: |
+      // Result: current token.
+      tok_this
+
+  - name: tok_find_part
+    sig: |
+      <b>tok_find_part</b>(t: Token, a: String) ⇒ Token
+    synopsis: Finds part token with given alias or ID.
+    desc: |
+      Finds part token with given ID or aliase traversing entire part token graph. The start token is provided
+      by <code><b>t</b></code> parameter. Token ID or alias to find is defined by <code><b>a</b></code> parameter. This function
+      throws runtime exception if given alias or ID cannot be found or more than one token is found. This function
+      never returns <code>null</code>. If more than one token is expected - use <code>tok_find_parts()</code>
+      function instead. See also <code>tok_has_part()</code> function to check if certain part token exists.
+    usage: |
+      // Result: part token of the current token found by 'alias' alias,
+      //         if any, or throws runtime exception.
+      tok_find_part(tok_this, 'alias')
+
+  - name: tok_has_part
+    sig: |
+      <b>tok_has_part</b>(t: Token, a: String) ⇒ Boolean
+    synopsis: Checks if part token with given alias or ID exists.
+    desc: |
+      Checks the existence of the part token with given ID or aliase traversing entire part token graph.
+      The start token is provided by <code><b>t</b></code> parameter. Token ID or alias to find is defined by <code><b>a</b></code>
+      parameter. See also <code>if()</code> function for 'if-then-else' branching support.
+    usage: |
+      // Result: 'true' if part token of the current token found by 'alias' alias, 'false' otherwise.
+      tok_has_part(tok_this, 'alias')
+
+      // Result: part token 'alias' if it exists or the current token if it does not.
+      @this = tok_this
+      @tok = if(tok_has_part(@this, 'alias'), tok_find_part(@this, 'alias'), @this)
+
+  - name: tok_find_parts
+    sig: |
+      <b>tok_find_parts</b>(t: Token, a: String) ⇒ List[Token]
+    synopsis: Finds part tokens with given alias or ID.
+    desc: |
+      Finds part tokens with given ID or aliase traversing entire part token graph. The start token is provided
+      by <code><b>t</b></code> parameter. Token ID or alias to find is defined by <code><b>a</b></code> parameter. This function
+      may return an empty list but never a <code>null</code>.
+    usage: |
+      // Result: list of part tokens, potentially empty, of the current token found by 'alias' alias.
+      tok_find_parts(tok_this, 'alias')
+
+      // Result: part token 'alias' if it exists or the current token if it does not.
+      @this = tok_this
+      @parts = tok_find_parts(@this, 'alias')
+      @tok = if(is_empty(@parts), @this, first(@parts))
+
+  - name: tok_txt
+    sig: |
+      <b>tok_txt</b>(t: Token<em><sub>opt</sub></em>) ⇒ String
+    synopsis: Returns token's original text
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getOriginalText()">token's original text</a>.
+      If <code>t</code> is not provided the current token is assumed.
+    usage: |
+      // Result: token original input text.
+      tok_txt
+
+  - name: tok_norm_txt
+    sig: |
+      <b>tok_norm_txt</b>(t: Token<em><sub>opt</sub></em>) ⇒ String
+    synopsis: Returns token's normalized text
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getNormalizedText()">token's normalized text</a>.
+      If <code>t</code> is not provided the current token is assumed.
+    usage: |
+      // Result: token normalized input text.
+      tok_norm_txt
+
+  - name: tok_index
+    sig: |
+      <b>tok_index</b>(t: Token<em><sub>opt</sub></em>) ⇒ Long
+    synopsis: Returns token's index in the original input
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getIndex()">token's index</a> in the original input. Note that this is an index of the token and not of the character.
+      If <code>t</code> is not provided the current token is assumed.
+    usage: |
+      // Result: 'true' if index of this token in the original input is equal to 1.
+      tok_index == 1
+      tok_index(tok_this) == 1
+
+  - name: tok_is_first
+    sig: |
+      <b>tok_is_first</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <code>true</code> if this token is the first in the original input
+    desc: |
+      Returns <code>true</code> if this token is the first in the original input. Note that this checks index of the token and not of the character.
+      If <code>t</code> is not provided the current token is assumed.
+    usage: |
+      // Result: 'true' if this token is the first token in the original input.
+      tok_is_first
+      tok_is_first(tok_this)
+
+  - name: tok_is_last
+    sig: |
+      <b>tok_is_last</b>(t: Token<em><sub>opt</sub></em>) ⇒ Boolean
+    synopsis: Returns <code>true</code> if this token is the last in the original input
+    desc: |
+      Returns <code>true</code> if this token is the last in the original input. Note that this checks index of the token and not of the character.
+      If <code>t</code> is not provided the current token is assumed
+    usage: |
+      // Result: 'true' if this token is the last token in the original input.
+      tok_is_last
+      tok_is_last(tok_this)
+
+  - name: tok_is_before_id
+    sig: |
+      <b>tok_is_before_id</b>(id: String) ⇒ Boolean
+    synopsis: Returns <code>true</code> if there is a token with ID <code>id</code> after this token
+    desc: |
+      Returns <code>true</code> if there is a token with ID <code>id</code> after this token.
+    usage: |
+      // Result: 'true' if there is a token with ID 'a' after this token.
+      tok_is_before_id('a')
+
+  - name: tok_is_after_id
+    sig: |
+      <b>tok_is_after_id</b>(id: String) ⇒ Boolean
+    synopsis: Returns <code>true</code> if there is a token with ID <code>id</code> before this token
+    desc: |
+      Returns <code>true</code> if there is a token with ID <code>id</code> before this token.
+    usage: |
+      // Result: 'true' if there is a token with ID 'a' before this token.
+      tok_is_after_id('a')
+
+  - name: tok_is_between_ids
+    sig: |
+      <b>tok_is_between_ids</b>(id1: String, id2: String) ⇒ Boolean
+    synopsis: Returns <code>true</code> if this token is located between tokens with IDs <code>id1</code> and <code>id2</code>.
+    desc: |
+      Returns <code>true</code> if this token is located between tokens with IDs <code>id1</code> and <code>id2</code>.
+    usage: |
+      // Result: 'true' if this token is located after token with ID 'before' and before the token with ID 'after'.
+      tok_is_between_ids('before', 'after')
+
+  - name: tok_is_between_groups
+    sig: |
+      <b>tok_is_between_groups</b>(grp1: String, grp2: String) ⇒ Boolean
+    synopsis: Returns <code>true</code> if this token is located between tokens with group IDs <code>grp1</code> and <code>grp2</code>.
+    desc: |
+      Returns <code>true</code> if this token is located between tokens with group IDs <code>grp1</code> and <code>grp2</code>.
+    usage: |
+      // Result: 'true' if this token is located after token belonging to the group 'before' and before the token belonging to the group 'after'.
+      tok_is_between_groups('before', 'after')
+
+  - name: tok_is_between_parents
+    sig: |
+      <b>tok_is_between_parents</b>(id1: String, id2: String) ⇒ Boolean
+    synopsis: Returns <code>true</code> if this token is located between tokens with parent IDs <code>id1</code> and <code>id2</code>.
+    desc: |
+      Returns <code>true</code> if this token is located between tokens with parent IDs <code>id1</code> and <code>id2</code>.
+    usage: |
+      // Result: 'true' if this token is located after token with parent ID 'before' and before the token with parent ID 'after'.
+      tok_is_between_parents('before', 'after')
+
+  - name: tok_is_before_group
+    sig: |
+      <b>tok_is_before_group</b>(grp: String) ⇒ Boolean
+    synopsis: |
+      Returns <code>true</code> if there is a token that belongs to the
+      <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getGroups()">group</a>
+      <code>grp</code> after this token
+    desc: |
+      Returns <code>true</code> if there is a token that belongs to the
+      <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getGroups()">group</a>
+      <code>grp</code> after this token.
+    usage: |
+      // Result: 'true' if there is a token that belongs to the group 'grp' after this token.
+      tok_is_before_group('grp')
+
+  - name: tok_is_after_group
+    sig: |
+      <b>tok_is_after_group</b>(grp: String) ⇒ Boolean
+    synopsis: |
+      Returns <code>true</code> if there is a token that belongs to the
+      <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getGroups()">group</a>
+      <code>grp</code> before this token
+    desc: |
+      Returns <code>true</code> if there is a token that belongs to the
+      <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getGroups()">group</a>
+      <code>grp</code> before this token.
+    usage: |
+      // Result: 'true' if there is a token that belongs to the group 'grp' before this token.
+      tok_is_after_group('grp')
+
+  - name: tok_is_after_parent
+    sig: |
+      <b>tok_is_after_parent</b>(parentId: String) ⇒ Boolean
+    synopsis: |
+      Returns <code>true</code> if there is a token with
+      <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getParentId()">parent ID</a>
+      <code>parentId</code> before this token
+    desc: |
+      Returns <code>true</code> if there is a token with
+      <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getParentId()">parent ID</a>
+      <code>parentId</code> before this token.
+    usage: |
+      // Result: 'true' if there is a token with parent ID 'owner' before this token.
+      tok_is_after_parent('owner')
+
+  - name: tok_is_before_parent
+    sig: |
+      <b>tok_is_before_parent</b>(parentId: String) ⇒ Boolean
+    synopsis: |
+      Returns <code>true</code> if there is a token with
+      <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getParentId()">parent ID</a>
+      <code>parentId</code> after this token
+    desc: |
+      Returns <code>true</code> if there is a token with
+      <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCToken.html#getParentId()">parent ID</a>
+      <code>parentId</code> after this token.
+    usage: |
+      // Result: 'true' if there is a token with parent ID 'owner' after this token.
+      tok_is_before_parent('owner')
+
+  - name: tok_all
+    sig: |
+      <b>tok_all</b> ⇒ List[Token]
+    synopsis: |
+      Returns all tokens from the original input
+    desc: |
+      Returns all tokens from the original input.
+    usage: |
+      // Result: list of all tokens for the original input.
+      tok_all
+
+  - name: tok_count
+    sig: |
+      <b>tok_count</b> ⇒ Long
+    synopsis: |
+      Returns number of tokens from the original input
+    desc: |
+      Returns number of tokens from the original input.
+      It is equivalent to <code>size(tok_all)</code>
+    usage: |
+      // Result: number of all tokens for the original input.
+      tok_count
+
+  - name: tok_all_for_id
+    sig: |
+      <b>tok_all_for_id</b>(id: String) ⇒ List[Token]
+    synopsis: |
+      Returns list of tokens from the original input with ID <code>id</code>
+    desc: |
+      Returns list of tokens from the original input with ID <code>id</code>.
+    usage: |
+      // Result: list of tokens for the original input that have ID 'id'.
+      tok_all_for_id('id')
+
+  - name: tok_all_for_parent
+    sig: |
+      <b>tok_all_for_id</b>(parentId: String) ⇒ List[Token]
+    synopsis: |
+      Returns list of tokens from the original input with parent ID <code>parentId</code>
+    desc: |
+      Returns list of tokens from the original input with parent ID <code>parentId</code>.
+    usage: |
+      // Result: list of tokens for the original input that have parent ID 'id'.
+      tok_all_for_parent('id')
+
+  - name: tok_all_for_group
+    sig: |
+      <b>tok_all_for_group</b>(grp: String) ⇒ List[Token]
+    synopsis: |
+      Returns list of tokens from the original input that belong to the group <code>grp</code>
+    desc: |
+      Returns list of tokens from the original input that belong to the group <code>grp</code>.
+    usage: |
+      // Result: list of tokens for the original input that belong to th group 'grp'.
+      tok_all_for_group('grp')
+
+fn-datetime:
+  - name: year
+    sig: |
+      <b>year</b> ⇒ Long
+    synopsis: Returns current year
+    desc: |
+      Returns current year.
+    usage: |
+      // Result: 2021
+      year
+
+  - name: month
+    sig: |
+      <b>month</b> ⇒ Long
+    synopsis: |
+      Returns current month: 1 ... 12
+    desc: |
+      Returns current month: 1 ... 12.
+    usage: |
+      // Result: 5
+      month
+
+  - name: day_of_month
+    sig: |
+      <b>day_of_month</b> ⇒ Long
+    synopsis: |
+      Returns current day of the month: 1 ... 31
+    desc: |
+      Returns current day of the month: 1 ... 31.
+    usage: |
+      // Result: 5
+      day_of_month
+
+  - name: day_of_week
+    sig: |
+      <b>day_of_week</b> ⇒ Long
+    synopsis: |
+      Returns current day of the week: 1 ... 7
+    desc: |
+      Returns current day of the week: 1 ... 7.
+    usage: |
+      // Result: 5
+      day_of_week
+
+  - name: day_of_year
+    sig: |
+      <b>day_of_year</b> ⇒ Long
+    synopsis: |
+      Returns current day of the year: 1 ... 365
+    desc: |
+      Returns current day of the year: 1 ... 365.
+    usage: |
+      // Result: 51
+      day_of_year
+
+  - name: hour
+    sig: |
+      <b>hour</b> ⇒ Long
+    synopsis: |
+      Returns current hour: 0 ... 23
+    desc: |
+      Returns current hour: 0 ... 23.
+    usage: |
+      // Result: 11
+      hour
+
+  - name: minute
+    sig: |
+      <b>minute</b> ⇒ Long
+    synopsis: |
+      Returns current minute: 0 ... 59
+    desc: |
+      Returns current minute: 0 ... 59.
+    usage: |
+      // Result: 11
+      minute
+
+  - name: second
+    sig: |
+      <b>second</b> ⇒ Long
+    synopsis: |
+      Returns current second: 0 ... 59
+    desc: |
+      Returns current second: 0 ... 59.
+    usage: |
+      // Result: 11
+      second
+
+  - name: week_of_month
+    sig: |
+      <b>week_of_month</b> ⇒ Long
+    synopsis: |
+      Returns current week of the month: 1 ... 4
+    desc: |
+      Returns current week of the month: 1 ... 4.
+    usage: |
+      // Result: 2
+      week_of_month
+
+  - name: week_of_year
+    sig: |
+      <b>week_of_year</b> ⇒ Long
+    synopsis: |
+      Returns current week of the year: 1 ... 56
+    desc: |
+      Returns current week of the year: 1 ... 56.
+    usage: |
+      // Result: 21
+      week_of_year
+
+  - name: quarter
+    sig: |
+      <b>quarter</b> ⇒ Long
+    synopsis: |
+      Returns current quarter: 1 ...4
+    desc: |
+      Returns current quarter: 1 ... 4.
+    usage: |
+      // Result: 2
+      quarter
+
+  - name: now
+    sig: |
+      <b>now</b> ⇒ Long
+    synopsis: |
+      Returns current time in milliseconds
+    desc: |
+      Returns current time in milliseconds.
+    usage: |
+      // Result: 122312341212
+      now
+
+fn-req:
+  - name: req_id
+    sig: |
+      <b>req_id</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getServerRequestId()">server request ID</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getServerRequestId()">server request ID</a>.
+    usage: |
+      // Result: server request ID.
+      req_id
+
+  - name: req_normtext
+    sig: |
+      <b>req_normtext</b> ⇒ String
+    synopsis: Returns request <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getNormalizedText()">normalied text</a>
+    desc: |
+      Returns request <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getNormalizedText()">normalized text</a>.
+    usage: |
+      // Result: request normalized text.
+      req_normtext
+
+  - name: req_tstamp
+    sig: |
+      <b>req_tstamp</b> ⇒ Long
+    synopsis: Gets UTC/GMT receive <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getNormalizedText()">timestamp</a>
+    desc: |
+      Gets UTC/GMT <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getNormalizedText()">timestamp</a>
+      in ms when user input was received.
+    usage: |
+      // Result: input receive timsstamp in ms.
+      req_tstamp
+
+  - name: req_addr
+    sig: |
+      <b>req_addr</b> ⇒ String
+    synopsis: Gets remote client <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getRemoteAddress()">address</a>
+    desc: |
+      Gets remote client <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getRemoteAddress()">address</a> that made the original REST call.
+      Returns <code>null</code> if remote client address is not available.
+    usage: |
+      // Result: remote client address or 'null'.
+      req_addr
+
+  - name: req_agent
+    sig: |
+      <b>req_agent</b> ⇒ String
+    synopsis: Gets remote client <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getClientAgent()">agent</a>
+    desc: |
+      Gets remote client <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCRequest.html#getRemoteClientAgent()">agent</a> that made the original REST call.
+      Returns <code>null</code> if remote client agent is not available.
+    usage: |
+      // Result: remote client agent or 'null'.
+      req_agent
+
+fn-user:
+  - name: user_id
+    sig: |
+      <b>user_id</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getId()">user ID</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getId()">user ID</a>.
+    usage: |
+      // Result: user ID.
+      user_id
+
+  - name: user_fname
+    sig: |
+      <b>user_fname</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getFirstName()">user first name</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getFirstName()">user first name</a>.
+    usage: |
+      // Result: user first name.
+      user_fname
+
+  - name: user_lname
+    sig: |
+      <b>user_lname</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getLastName()">user last name</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getLastName()">user last name</a>.
+    usage: |
+      // Result: user last name.
+      user_lname
+
+  - name: user_email
+    sig: |
+      <b>user_email</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getEmail()">user email</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getEmail()">user email</a>.
+    usage: |
+      // Result: user email.
+      user_email
+
+  - name: user_admin
+    sig: |
+      <b>user_admin</b> ⇒ Boolean
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#isAdmin()">user admin</a> flag
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#isAdmin()">user admin</a> flag.
+    usage: |
+      // Result: user admin flag.
+      user_admin
+
+  - name: user_signup_tstamp
+    sig: |
+      <b>user_signup_tstamp</b> ⇒ Long
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getSignupTimestamp()">user signup timestamp</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCUser.html#getSignupTimestamp()">user signup timestamp</a>.
+    usage: |
+      // Result: user signup timestamp in milliseconds.
+      user_signup_tstamp
+
+fn-company:
+  - name: comp_id
+    sig: |
+      <b>comp_id</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getId()">company ID</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getId()">company ID</a>.
+    usage: |
+      // Result: company ID.
+      comp_id
+
+  - name: comp_name
+    sig: |
+      <b>comp_name</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getName()">company name</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getName()">company name</a>.
+    usage: |
+      // Result: company name.
+      comp_name
+
+  - name: comp_website
+    sig: |
+      <b>comp_website</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getWebsite()">company website</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getWebsite()">company website</a>.
+    usage: |
+      // Result: company website.
+      comp_website
+
+  - name: comp_country
+    sig: |
+      <b>comp_country</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getCountry()">company country</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getCountry()">company country</a>.
+    usage: |
+      // Result: company country.
+      comp_country
+
+  - name: comp_region
+    sig: |
+      <b>comp_region</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getRegion()">company region</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getRegion()">company region</a>.
+    usage: |
+      // Result: company region.
+      comp_region
+
+  - name: comp_city
+    sig: |
+      <b>comp_city</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getCity()">company city</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getCity()">company city</a>.
+    usage: |
+      // Result: company region.
+      comp_city
+
+  - name: comp_addr
+    sig: |
+      <b>comp_addr</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getAddress()">company address</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getAddress()">company address</a>.
+    usage: |
+      // Result: company address.
+      comp_addr
+
+  - name: comp_postcode
+    sig: |
+      <b>comp_postcode</b> ⇒ String
+    synopsis: Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getPostalCode()">company postal code</a>
+    desc: |
+      Returns <a class="not-code" target="javadoc" href="/apis/latest/org/apache/nlpcraft/model/NCCompany.html#getPostalCode()">company postal code</a>.
+    usage: |
+      // Result: company postal code.
+      comp_postcode
+
+fn-math:
+  - name: abs
+    sig: |
+      <b>abs</b>(x: {Long|Double}) ⇒ {Long|Double}
+    synopsis: Returns absolute value for parameter <code><b>x</b></code>
+    desc: |
+      Returns absolute value for parameter <code><b>x</b></code>.
+    usage: |
+      // Result: 1
+      abs(-1)
+      // Result: 1.5
+      abs(-1.5)
+
+  - name: ceil
+    sig: |
+      <b>ceil</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#ceil(double)"><code>Math.ceil(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#ceil(double)"><code>Math.ceil(<b>d</b>)</code></a>.
+    usage: |
+      // Result: 2.0
+      ceil(1.5)
+
+  - name: floor
+    sig: |
+      <b>floor</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#floor(double)"><code>Math.floor(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#floor(double)"><code>Math.floor(<b>d</b>)</code></a>.
+    usage: |
+      // Result: 1.0
+      floor(1.5)
+
+  - name: rint
+    sig: |
+      <b>rint</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#rint(double)"><code>Math.rint(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#rint(double)"><code>Math.rint(<b>d</b>)</code></a>.
+    usage: |
+      // Result: 1.0
+      rint(1.2)
+
+  - name: round
+    sig: |
+      <b>round</b>(d: Double) ⇒ Long
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#round(double)"><code>Math.round(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#round(double)"><code>Math.round(<b>d</b>)</code></a>.
+    usage: |
+      // Result: 1
+      round(1.2)
+
+  - name: signum
+    sig: |
+      <b>signum</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#signum(double)"><code>Math.signum(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#signum(double)"><code>Math.signum(<b>d</b>)</code></a>.
+    usage: |
+      // Result: 1.0
+      signum(1.2)
+
+  - name: sqrt
+    sig: |
+      <b>sqrt</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#sqrt(double)"><code>Math.sqrt(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#sqrt(double)"><code>Math.sqrt(<b>d</b>)</code></a>.
+    usage: |
+      // Result: 4.0
+      sqrt(2.0)
+
+  - name: cbrt
+    sig: |
+      <b>cbrt</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#cbrt(double)"><code>Math.cbrt(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#cbrt(double)"><code>Math.cbrt(<b>d</b>)</code></a>.
+    usage: |
+      // Result: -3.0
+      cbrt(-27.0)
+
+  - name: acos
+    sig: |
+      <b>acos</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#acos(double)"><code>Math.acos(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#acos(double)"><code>Math.acos(<b>d</b>)</code></a>.
+    usage: |
+      acos(1.0)
+
+  - name: asin
+    sig: |
+      <b>asin</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#asin(double)"><code>Math.asin(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#asin(double)"><code>Math.asin(<b>d</b>)</code></a>.
+    usage: |
+      asin(1.0)
+
+  - name: atan
+    sig: |
+      <b>atan</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#atan(double)"><code>Math.atan(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#atan(double)"><code>Math.atan(<b>d</b>)</code></a>.
+    usage: |
+      atan(1.0)
+
+  - name: tan
+    sig: |
+      <b>tan</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#tan(double)"><code>Math.tan(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#tan(double)"><code>Math.tan(<b>d</b>)</code></a>.
+    usage: |
+      tan(1.0)
+
+  - name: sin
+    sig: |
+      <b>sin</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#sin(double)"><code>Math.sin(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#sin(double)"><code>Math.sin(<b>d</b>)</code></a>.
+    usage: |
+      sin(1.0)
+
+  - name: cos
+    sig: |
+      <b>cos</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#cos(double)"><code>Math.cos(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#cos(double)"><code>Math.cos(<b>d</b>)</code></a>.
+    usage: |
+      cos(1.0)
+
+  - name: tanh
+    sig: |
+      <b>tanh</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#tanh(double)"><code>Math.tanh(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#tanh(double)"><code>Math.tanh(<b>d</b>)</code></a>.
+    usage: |
+      tanh(1.0)
+
+  - name: sinh
+    sig: |
+      <b>sinh</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#sinh(double)"><code>Math.sinh(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#sinh(double)"><code>Math.sinh(<b>d</b>)</code></a>.
+    usage: |
+      sinh(1.0)
+
+  - name: cosh
+    sig: |
+      <b>cosh</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#cosh(double)"><code>Math.cosh(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#cosh(double)"><code>Math.cosh(<b>d</b>)</code></a>.
+    usage: |
+      cosh(1.0)
+
+  - name: atan2
+    sig: |
+      <b>atan2</b>(d1: Double, d2: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#atan2(double, double)"><code>Math.atan2(<b>d2</b>, <b>d2</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#atan2(double, double)"><code>Math.atan2(<b>d1</b>, <b>d2</b>)</code></a>.
+    usage: |
+      atan2(1.0, 1.0)
+
+  - name: degrees
+    sig: |
+      <b>degrees</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#toDegrees(double)"><code>Math.toDegrees(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#toDegrees(double)"><code>Math.toDegrees(<b>d</b>)</code></a>.
+    usage: |
+      degrees(1.0)
+
+  - name: radians
+    sig: |
+      <b>radians</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#toRadians(double)"><code>Math.toRadians(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#toRadians(double)"><code>Math.toRadians(<b>d</b>)</code></a>.
+    usage: |
+      radians(1.0)
+
+  - name: exp
+    sig: |
+      <b>exp</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#exp(double)"><code>Math.exp(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#exp(double)"><code>Math.exp(<b>d</b>)</code></a>.
+    usage: |
+      exp(1.0)
+
+  - name: expm1
+    sig: |
+      <b>expm1</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#expm1(double)"><code>Math.expm1(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#expm1(double)"><code>Math.expm1(<b>d</b>)</code></a>.
+    usage: |
+      expm1(1.0)
+
+  - name: log
+    sig: |
+      <b>log</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#log(double)"><code>Math.log(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#log(double)"><code>Math.log(<b>d</b>)</code></a>.
+    usage: |
+      log(1.0)
+
+  - name: log10
+    sig: |
+      <b>log10</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#log10(double)"><code>Math.log10(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#log10(double)"><code>Math.log10(<b>d</b>)</code></a>.
+    usage: |
+      log10(1.0)
+
+  - name: square
+    sig: |
+      <b>square</b>(x: {Long|Double}) ⇒ {Long|Double}
+    synopsis: Returns square of <code>><b>x</b></code>
+    desc: |
+      Returns square of <code>><b>x</b></code>
+    usage: |
+      // Result: 4
+      square(2)
+
+  - name: log1p
+    sig: |
+      <b>log1p</b>(d: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#log1p(double)"><code>Math.log1p(<b>d</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#log1p(double)"><code>Math.log1p(<b>d</b>)</code></a>.
+    usage: |
+      log1p(1.0)
+
+  - name: pi
+    sig: |
+      <b>pi</b> ⇒ Double
+    synopsis: Returns PI constant
+    desc: |
+      Returns PI constant.
+    usage: |
+      // Result: 3.14159265359
+      pi
+
+  - name: euler
+    sig: |
+      <b>pi</b> ⇒ Double
+    synopsis: Returns Euler constant
+    desc: |
+      Returns Euler constant.
+    usage: |
+      // Result: 0.5772156649
+      euler
+
+  - name: max
+    sig: |
+      <b>max</b>(c: List) ⇒ Any
+    synopsis: Returns maximum value for given list
+    desc: |
+      Returns maximum value for given list. Throws runtime exception if the list is empty.
+      This function uses a natural ordering.
+    usage: |
+      // Result: 3
+      max(list(1, 2, 3))
+
+  - name: min
+    sig: |
+      <b>min</b>(c: List) ⇒ Any
+    synopsis: Returns minimum value for given list
+    desc: |
+      Returns minimum value for given list. Throws runtime exception if the list is empty.
+      This function uses a natural ordering.
+    usage: |
+      // Result: 1
+      min(list(1, 2, 3))
+
+  - name: avg
+    sig: |
+      <b>avg</b>(c: List[{Long|Double|String}]) ⇒ Double
+    synopsis: Returns average (mean) value for given list
+    desc: |
+      Returns average (mean) value for given list of ints, doubles or strings.
+      Throws runtime exception if the list is empty.
+      If list list contains strings, they have to be convertable to int or double.
+    usage: |
+      // Result: 2.0
+      avg(list(1, 2, 3))
+      avg(list("1.0", 2, "3"))
+
+  - name: stdev
+    sig: |
+      <b>stdev</b>(c: List[{Long|Double|String}]) ⇒ Double
+    synopsis: Returns standard deviation value for given list
+    desc: |
+      Returns standard deviation value for given list of ints, doubles or strings.
+      Throws runtime exception if the list is empty.
+      If list list contains strings, they have to be convertable to int or double.
+    usage: |
+      stdev(list(1, 2, 3))
+      stdev(list("1.0", 2, "3"))
+
+  - name: pow
+    sig: |
+      <b>pow</b>(d1: Double, d2: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#pow(double, double)"><code>Math.pow(<b>d2</b>, <b>d2</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#pow(double, double)"><code>Math.pow(<b>d1</b>, <b>d2</b>)</code></a>.
+    usage: |
+      // Result: 4.0
+      pow(2.0, 2.0)
+
+  - name: hypot
+    sig: |
+      <b>hypot</b>(d1: Double, d2: Double) ⇒ Double
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#hypot(double, double)"><code>Math.hypot(<b>d2</b>, <b>d2</b>)</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html#hypot(double, double)"><code>Math.hypot(<b>d1</b>, <b>d2</b>)</code></a>.
+    usage: |
+      hypot(2.0, 2.0)
+
+fn-collections:
+  - name: list
+    sig: |
+      <b>list</b>(t: Any...<em><sub>opt</sub></em>) ⇒ List[Any]
+    synopsis: Returns new list with given parameters
+    desc: |
+      Returns new list with given parameters.
+    usage: |
+      // Result: []
+      list
+      // Result: [1, 2, 3]
+      list(1, 2, 3)
+      // Result: ["1", true, 1.25]
+      list("1", 2 == 2, to_double('1.25'))
+
+  - name: get
+    sig: |
+      <b>get</b>(c: {List|Map}, k: {Long|Any}) ⇒ Any
+    synopsis: Gets element <code><b>k</b></code> from either list or map <code><b>c</b></code>
+    desc: |
+      Gets element from either list or map <code><b>c</b></code>. For list the
+      <code><b>k</b></code> must be 0-based integer index in the list.
+    usage: |
+      // Result: 1
+      get(list(1, 2, 3), 0)
+      // Result: true
+      get(json('{"a": true}'), "a")
+
+  - name: has
+    sig: |
+      <b>has</b>(c: List, x: Any) ⇒ Boolean
+    synopsis: Calls <code><b>c</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/List.html#contains(java.lang.Object)"><code>contains(<b>x</b></code>)</a>
+    desc: |
+      Calls <code><b>c</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/List.html#contains(java.lang.Object)"><code>contains(<b>x</b></code>)</a>
+      and returns its result.
+    usage: |
+      // Result: true
+      has(list("a", "b"), "a")
+
+  - name: has_all
+    sig: |
+      <b>has_all</b>(c: List, x: Any) ⇒ Boolean
+    synopsis: Calls <code><b>c</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/List.html#containsAll(java.util.Collection)"><code>containsAll(<b>x</b></code>)</a>
+    desc: |
+      Calls <code><b>c</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/List.html#containsAll(java.util.Collection)"><code>containsAll(<b>x</b></code>)</a>
+      and returns its result.
+    usage: |
+      // Result: false
+      has_all(list("a", "b"), "a")
+
+  - name: has_any
+    sig: |
+      <b>has_any</b>(c: List, x: List) ⇒ Boolean
+    synopsis: Checks if list <code><b>c</b></code> contains any of the elements from the list <code><b>x</b></code>
+    desc: |
+      Checks if list <code><b>c</b></code> contains any of the elements from the list <code><b>x</b></code>.
+    usage: |
+      // Result: true
+      has_any(list("a", "b"), list("a"))
+
+  - name: first
+    sig: |
+      <b>first</b>(c: List) ⇒ Any
+    synopsis: Returns first element from the list <code><b>c</b></code> or <code>null</code>
+    desc: |
+      Returns first element from the list <code><b>c</b></code> or <code>null</code> if the list is empty.
+    usage: |
+      // Result: "a"
+      first(list("a", "b"))
+
+  - name: last
+    sig: |
+      <b>last</b>(c: List) ⇒ Any
+    synopsis: Returns last element from the list <code><b>c</b></code> or <code>null</code>
+    desc: |
+      Returns last element from the list <code><b>c</b></code> or <code>null</code> if the list is empty.
+    usage: |
+      // Result: "b"
+      last(list("a", "b"))
+
+  - name: keys
+    sig: |
+      <b>keys</b>(m: Map) ⇒ Any
+    synopsis: Returns list of keys for map <code><b>m</b></code>
+    desc: |
+      Returns list of keys for map <code><b>m</b></code>.
+    usage: |
+      // Result: ["a", "b"]
+      keys(json('{"a": true, "b": 1}'))
+
+  - name: values
+    sig: |
+      <b>values</b>(m: Map) ⇒ Any
+    synopsis: Returns list of values for map <code><b>m</b></code>
+    desc: |
+      Returns list of values for map <code><b>m</b></code>.
+    usage: |
+      // Result: [true, 1]
+      values(json('{"a": true, "b": 1}'))
+
+  - name: reverse
+    sig: |
+      <b>reverse</b>(x: List) ⇒ List
+    synopsis: Reverses the list <code><b>x</b></code>
+    desc: |
+      Returns reversed list <code><b>x</b></code>. This function uses the natural sorting order.
+    usage: |
+      // Result: [3, 2, 1]
+      reverse(list(1, 2, 3))
+
+  - name: sort
+    sig: |
+      <b>sort</b>(x: List) ⇒ List
+    synopsis: Sorts the list <code><b>x</b></code>
+    desc: |
+      Returns sorted list <code><b>x</b></code>. This function uses the natural sorting order.
+    usage: |
+      // Result: [1, 2, 3]
+      sort(list(2, 1, 3))
+
+  - name: is_empty
+    sig: |
+      <b>is_empty</b>(x: {String|List|Map}) ⇒ Boolean
+    synopsis: Checks if given string, list or map is <code><b>x</b></code> empty
+    desc: |
+      Checks if given string, list or map <code><b>x</b></code> is empty.
+    usage: |
+      // Result: false
+      is_empty("text")
+      is_empty(list(1))
+      is_empty(json('{"a": 1}'))
+
+  - name: non_empty
+    sig: |
+      <b>non_empty</b>(x: {String|List|Map}) ⇒ Boolean
+    synopsis: Checks if given string, list or map is <code><b>x</b></code> non empty
+    desc: |
+      Checks if given string, list or map <code><b>x</b></code> is non empty.
+    usage: |
+      // Result: true
+      non_empty("text")
+      non_empty(list(1))
+      non_empty(json('{"a": 1}'))
+
+  - name: distinct
+    sig: |
+      <b>distinct</b>(x: List) ⇒ List
+    synopsis: Makes list <code><b>x</b></code> distinct
+    desc: |
+      Makes list <code><b>x</b></code> distinct.
+    usage: |
+      // Result: [1, 2, 3]
+      distinct(list(1, 2, 2, 3, 1))
+
+  - name: concact
+    sig: |
+      <b>concat</b>(x1: List, x1: List) ⇒ List
+    synopsis: Concatenates lists <code><b>x1</b></code> and <code><b>x2</b></code>
+    desc: |
+      Concatenates lists <code><b>x1</b></code> and <code><b>x2</b></code>.
+    usage: |
+      // Result: [1, 2, 3, 4]
+      concat(list(1, 2), list(3, 4))
+
+fn-metadata:
+  - name: meta_part
+    sig: |
+      <b>meta_part</b>(a: String, p: String) ⇒ Any
+    synopsis: Gets metadata property <code><b>p</b></code> of part token <code><b>a</b></code>
+    desc: |
+      Finds a part token with alias or ID <code><b>a</b></code>, if any, and returns its metadata property <code><b>p</b></code>.
+      If part token cannot be found the runtime exception will be thrown. Returns <code>null</code> if metadata
+      does not exist.
+    usage: |
+      // Result: 'prop' property of 'alias' part token of the current token.
+      meta_part('alias', 'prop')
+
+  - name: meta_tok
+    sig: |
+      <b>meta_tok</b>(p: String) ⇒ Any
+    synopsis: Gets token metadata property <code><b>p</b></code>
+    desc: |
+      Gets token metadata property <code><b>p</b></code>. See
+      <a href="/data-model.html#meta">token metadata</a> for more information.
+    usage: |
+      // Result: 'nlpcraft:num:unit' token metadata property.
+      meta_tok('nlpcraft:num:unit')
+
+  - name: meta_model
+    sig: |
+      <b>meta_model</b>(p: String) ⇒ Any
+    synopsis: Gets model metadata property <code><b>p</b></code>
+    desc: |
+      Gets model metadata property <code><b>p</b></code>.
+    usage: |
+      // Result: 'my:prop' model metadata property.
+      meta_model('my:prop')
+
+  - name: meta_req
+    sig: |
+      <b>meta_req</b>(p: String) ⇒ Any
+    synopsis: Gets user REST call data property <code><b>p</b></code>
+    desc: |
+      Gets user REST call data property <code><b>p</b></code>. See <a href="/using-rest.html">REST API</a> for more details on <code>ask</code>
+      and <code>ask/sync</code> REST calls.
+    usage: |
+      // Result: 'my:prop' user request data property.
+      meta_req('my:prop')
+
+  - name: meta_user
+    sig: |
+      <b>meta_user</b>(p: String) ⇒ Any
+    synopsis: Gets user metadata property <code><b>p</b></code>
+    desc: |
+      Gets user metadata property <code><b>p</b></code>.
+    usage: |
+      // Result: 'my:prop' user metadata property.
+      meta_user('my:prop')
+
+  - name: meta_company
+    sig: |
+      <b>meta_company</b>(p: String) ⇒ Any
+    synopsis: Gets company metadata property <code><b>p</b></code>
+    desc: |
+      Gets company metadata property <code><b>p</b></code>.
+    usage: |
+      // Result: 'my:prop' company metadata property.
+      meta_company('my:prop')
+
+  - name: meta_intent
+    sig: |
+      <b>meta_intent</b>(p: String) ⇒ Any
+    synopsis: Gets intent metadata property <code><b>p</b></code>
+    desc: |
+      Gets intent metadata property <code><b>p</b></code>.
+    usage: |
+      // Result: 'my:prop' intent metadata property.
+      meta_intent('my:prop')
+
+  - name: meta_conv
+    sig: |
+      <b>meta_conv</b>(p: String) ⇒ Any
+    synopsis: Gets conversation metadata property <code><b>p</b></code>
+    desc: |
+      Gets conversation metadata property <code><b>p</b></code>.
+    usage: |
+      // Result: 'my:prop' conversation metadata property.
+      meta_conv('my:prop')
+
+  - name: meta_frag
+    sig: |
+      <b>meta_frag</b>(p: String) ⇒ Any
+    synopsis: Gets fragment metadata property <code><b>p</b></code>
+    desc: |
+      Gets fragment metadata property <code><b>p</b></code>. Fragment metadata can be optionally passed in
+      when referencing the fragment to parameterize it.
+    usage: |
+      // Result: 'my:prop' fragment metadata property.
+      meta_frag('my:prop')
+
+  - name: meta_sys
+    sig: |
+      <b>meta_sys</b>(p: String) ⇒ Any
+    synopsis: Gets system property or environment variable <code><b>p</b></code>
+    desc: |
+      Gets system property or environment variable <code><b>p</b></code>.
+    usage: |
+      // Result: 'java.home' system property.
+      meta_sys('java.home')
+      // Result: 'HOME' environment variable.
+      meta_sys('HOME')
+
+fn-other:
+  - name: if
+    sig: |
+      <b>if</b>(c: Boolean, then: Any: else: Any) ⇒ Any
+    synopsis: This function provides 'if-then-else' equivalent
+    desc: |
+      This function provides 'if-then-else' equivalent as IDL does not provide branching
+      on the language level. This function will evaluate <code><b>c</b></code> parameter and either
+      return <code><b>then</b></code> value if it evaluates to <code>true</code> or <code><b>else</b></code>
+      value in case if it evaluates to <code>false</code>. Note that evaluation will be
+      short-circuit, i.e. either <code><b>then</b></code> or <code><b>else</b></code> will actually be
+      computed but not both.
+    usage: |
+      // Result:
+      //  - 'list(1, 2, 3)' if 1st parameter is 'true'.
+      //  - 'null' if 1st parameter is 'false'.
+      if(meta_model('my_prop') == true, list(1, 2, 3), null)
+
+  - name: json
+    sig: |
+      <b>json</b>(p: String) ⇒ Map[String, Any]
+    synopsis: Converts JSON in <code><b>p</b></code> parameter to a map
+    desc: |
+      Converts JSON in <code><b>p</b></code> parameter to a map. Use single quoted
+      string to avoid escaping double quotes in JSON.
+    usage: |
+      // Result: Map.
+      json('{"a": 2, "b": [1, 2, 3]}')
+
+  - name: to_string
+    sig: |
+      <b>to_string</b>(p: Any) ⇒ {String|List[String]}
+    synopsis: Converts <code><b>p</b></code> parameter to a string
+    desc: |
+      Converts <code><b>p</b></code> parameter to a string. In case of a list
+      this function will convert individual list elements to string and return the
+      list of strings.
+    usage: |
+      // Result: "1.25"
+      to_string(1.25)
+      // Result: list("1", "2", "3")
+      to_string(list(1, 2, 3))
+
+  - name: or_else
+    sig: |
+      <b>or_else</b>(p: Any, a: Any) ⇒ Any
+    synopsis: Returns <code><b>p</b></code> if it is not <code>null</code>, <code><b>a</b></code> otherwise
+    desc: |
+      Returns <code><b>p</b></code> if it is not <code>null</code>, <code><b>a</b></code> otherwise.
+      Note that evaluation will be short-circuit, i.e. <code><b>a</b></code> will be evaluated only
+      if <code><b>p</b></code> is <code>null</code>.
+    usage: |
+      // Result: 'some_prop' model metadata or 'text' if one is 'null'.
+      @dflt = 'text'
+      or_else(meta_model('some_prop'), @dflt)
+
+fn-text:
+  - name: length
+    sig: |
+      <b>length</b>(p: {String|List|Map}) ⇒ Long
+    synopsis: Returns size or length of the given string, list or map
+    desc: |
+      Returns size or length of the given string, list or map. This function has
+      aliases: <code><b>size</b></code> and <code><b>count</b></code>.
+    usage: |
+      // Result: 9
+      length("some text")
+
+      // Result: 3
+      @lst = list(1, 2, 3)
+      size(@lst)
+      count(@lst)
+
+  - name: regex
+    sig: |
+      <b>regex</b>(s: String, rx: String) ⇒ Boolean
+    synopsis: Checks whether string <code>s</code> matches Java regular expression <code>rx</code>
+    desc: |
+      Returns <code>true</code> if string <code><b>s</b></code> matches Java regular expression <code><b>rx</b></code>,
+      <code>false</code> otherwise.
+    usage: |
+      regex('textabc', '^text.*$') // Returns 'true'.
+      regex('_textabc', '^text.*$') // Returns 'false'.
+
+  - name: trim
+    sig: |
+      <b>trim</b>(p: String) ⇒ Long
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#trim()"><code>String.trim()</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#trim()"><code>String.trim()</code></a> on
+      given parameter <code><b>p</b></code> and returns its result. This function has alias: <code><b>strip</b></code>
+    usage: |
+      // Result: "text"
+      trim(" text ")
+      strip(" text ")
+
+  - name: uppercase
+    sig: |
+      <b>uppercase</b>(p: String) ⇒ String
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#toUpperCase()"><code>String.toUpperCase()</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#toUpperCase()"><code>String.toUpperCase()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: "TEXT"
+      uppercase("text")
+
+  - name: lowercase
+    sig: |
+      <b>lowercase</b>(p: String) ⇒ String
+    synopsis: Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#toLowerCase()"><code>String.toLowerCase()</code></a>
+    desc: |
+      Calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#toLowerCase()"><code>String.toLowerCase()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: "text"
+      lowercase("TeXt")
+
+  - name: is_alpha
+    sig: |
+      <b>is_alpha</b>(p: String) ⇒ Boolean
+    synopsis: Calls <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isAlpha-java.lang.CharSequence-"><code>StringUtils.isAlpha()</code></a>
+    desc: |
+      Calls <a target="asf" href="https://commons.apache.org/">Apache Commons</a> <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isAlpha-java.lang.CharSequence-"><code>StringUtils.isAlpha()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: true
+      is_alpha("text")
+
+  - name: is_alphanum
+    sig: |
+      <b>is_alphanum</b>(p: String) ⇒ Boolean
+    synopsis: Calls <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isAlphanumeric-java.lang.CharSequence-"><code>StringUtils.isAlphanumeric()</code></a>
+    desc: |
+      Calls <a target="asf" href="https://commons.apache.org/">Apache Commons</a> <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isAlphanumeric-java.lang.CharSequence-"><code>StringUtils.isAlphanumeric()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: true
+      is_alphanum("text123")
+
+  - name: is_whitespace
+    sig: |
+      <b>is_whitespace</b>(p: String) ⇒ Boolean
+    synopsis: Calls <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isWhitespace-java.lang.CharSequence-"><code>StringUtils.isWhitespace()</code></a>
+    desc: |
+      Calls <a target="asf" href="https://commons.apache.org/">Apache Commons</a> <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isWhitespace-java.lang.CharSequence-"><code>StringUtils.isWhitespace()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: false
+      is_whitespace("text123")
+      // Result: true
+      is_whitespace("   ")
+
+  - name: is_num
+    sig: |
+      <b>is_num</b>(p: String) ⇒ Boolean
+    synopsis: Calls <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isNumeric-java.lang.CharSequence-"><code>StringUtils.isNumeric()</code></a>
+    desc: |
+      Calls <a target="asf" href="https://commons.apache.org/">Apache Commons</a> <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isNumeric-java.lang.CharSequence-"><code>StringUtils.isNumeric()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: true
+      is_num("123")
+
+  - name: is_numspace
+    sig: |
+      <b>is_numspace</b>(p: String) ⇒ Boolean
+    synopsis: Calls <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isNumericSpace-java.lang.CharSequence-"><code>StringUtils.isNumericSpace()</code></a>
+    desc: |
+      Calls <a target="asf" href="https://commons.apache.org/">Apache Commons</a> <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isNumericSpace-java.lang.CharSequence-"><code>StringUtils.isNumericSpace()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: true
+      is_numspace("  123")
+
+  - name: is_alphaspace
+    sig: |
+      <b>is_alphaspace</b>(p: String) ⇒ Boolean
+    synopsis: Calls <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isAlphaSpace-java.lang.CharSequence-"><code>StringUtils.isAlphaSpace()</code></a>
+    desc: |
+      Calls <a target="asf" href="https://commons.apache.org/">Apache Commons</a> <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isAlphaSpace-java.lang.CharSequence-"><code>StringUtils.isAlphaSpace()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: true
+      is_alphaspace("  text  ")
+
+  - name: is_alphanumspace
+    sig: |
+      <b>is_alphanumspace</b>(p: String) ⇒ Boolean
+    synopsis: Calls <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isAlphaNumericSpace-java.lang.CharSequence-"><code>StringUtils.isAlphaNumericSpace()</code></a>
+    desc: |
+      Calls <a target="asf" href="https://commons.apache.org/">Apache Commons</a> <a target="javadoc" href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#isAlphaNumericSpace-java.lang.CharSequence-"><code>StringUtils.isAlphaNumericSpace()</code></a>
+      on given parameter <code><b>p</b></code> and returns its result.
+    usage: |
+      // Result: true
+      is_alphanumspace(" 123 text  ")
+
+  - name: split
+    sig: |
+      <b>split</b>(p1: String, p2: String) ⇒ List[String]
+    synopsis: Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#split(java.lang.String)"><code>split(<b>p2</b>)</code></a>
+    desc: |
+      Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#split(java.lang.String)"><code>split(<b>p2</b>)</code></a>
+      and returns its result converted to the list.
+    usage: |
+      // Result: [ "a", "b", "c" ]
+      split("a|b|c", "|")
+
+  - name: split_trim
+    sig: |
+      <b>split_trim</b>(p1: String, p2: String) ⇒ List[String]
+    synopsis: Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#split(java.lang.String)"><code>split(<b>p2</b>)</code></a>
+    desc: |
+      Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#split(java.lang.String)"><code>split(<b>p2</b>)</code></a>
+      converting the result to the list. Then
+      calls <a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#strip()">String.strip()</a> on each
+      element.
+    usage: |
+      // Result: ["a", "b", "c"]
+      split_trim("a | b | c", "|")
+
+  - name: starts_with
+    sig: |
+      <b>starts_with</b>(p1: String, p2: String) ⇒ Boolean
+    synopsis: Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#split(java.lang.String)"><code>startsWith(<b>p2</b>)</code></a>
+    desc: |
+      Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#split(java.lang.String)"><code>startsWith(<b>p2</b>)</code></a>
+      and returns its result.
+    usage: |
+      // Result: true
+      starts_width("abc", "ab")
+
+  - name: ends_with
+    sig: |
+      <b>ends_with</b>(p1: String, p2: String) ⇒ Boolean
+    synopsis: Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#split(java.lang.String)"><code>endsWith(<b>p2</b>)</code></a>
+    desc: |
+      Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#split(java.lang.String)"><code>endsWith(<b>p2</b>)</code></a>
+      and returns its result.
+    usage: |
+      // Result: true
+      ends_width("abc", "bc")
+
+  - name: contains
+    sig: |
+      <b>contains</b>(p1: String, p2: String) ⇒ Boolean
+    synopsis: Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#contains(java.lang.CharSequence)"><code>contains(<b>p2</b>)</code></a>
+    desc: |
+      Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#contains(java.lang.CharSequence)"><code>contains(<b>p2</b>)</code></a>
+      and returns its result.
+    usage: |
+      // Result: true
+      contains("abc", "bc")
+
+  - name: index_of
+    sig: |
+      <b>index_of</b>(p1: String, p2: String) ⇒ Long
+    synopsis: Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#indexOf(java.lang.String)"><code>indexOf(<b>p2</b>)</code></a>
+    desc: |
+      Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#indexOf(java.lang.String)"><code>indexOf(<b>p2</b>)</code></a>
+      and returns its result.
+    usage: |
+      // Result: 1
+      index_of("abc", "bc")
+
+  - name: substr
+    sig: |
+      <b>substr</b>(p1: String, p2: Long, p3: Long) ⇒ String
+    synopsis: Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#substring(int,int)"><code>substring(<b>p2</b>, <b>p3</b>)</code></a>
+    desc: |
+      Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#substring(int,int)"><code>substring(<b>p2</b>, <b>p3</b>)</code></a>
+      and returns its result.
+    usage: |
+      // Result: "bc"
+      substr("abc", 1, 3)
+
+  - name: replace
+    sig: |
+      <b>replace</b>(p1: String, p2: String, p3: String) ⇒ String
+    synopsis: Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#replace(java.lang.CharSequence,java.lang.CharSequence)"><code>replace(<b>p2</b>, <b>p3</b>)</code></a>
+    desc: |
+      Calls <code><b>p1</b></code>.<a target="javadoc" href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#replace(java.lang.CharSequence,java.lang.CharSequence)"><code>replace(<b>p2</b>, <b>p3</b>)</code></a>
+      and returns its result.
+    usage: |
+      // Result: "aBC"
+      replace("abc", "bc", "BC")
+
+  - name: to_double
+    sig: |
+      <b>to_double</b>(p1: {Long|String}) ⇒ Double
+    synopsis: Converts given integer or string to double value
+    desc: |
+      Converts given integer or string to double value.
+    usage: |
+      // Result: 1.2
+      to_double("1.2")
+      // Result: 1.0
+      to_double(1)
+
+  - name: to_int
+    sig: |
+      <b>to_int</b>(p1: {Double|String}) ⇒ Long
+    synopsis: Converts given double or string to integer value
+    desc: |
+      Converts given double or string to integer value. In case of double
+      value it will be rounded to the nearest integer value.
+    usage: |
+      // Result: 1
+      to_int("1.2")
+      to_int(1.2)

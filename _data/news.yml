@@ -1,0 +1,199 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+- title: Apache NLPCraft 0.9.0 Released
+  url: /relnotes/release-notes-0.9.0.html
+  excerpt: Download NLPCraft 0.9.0. Scala 2.13 support + over 35 💪 fixes, improvements and enhancements.
+  publish_date: July 30, 2021
+  avatar_url: images/nlpcraft_logo.png
+  twitter_id: apachenlpcraft
+  href_target: _self
+
+- title: Как добавить NLP в Minecraft
+  url: https://habr.com/ru/post/561230/
+  excerpt: |
+    Создание хороших примеров по использованию NLP инструментария - не самая простая задача...
+  author: Сергей Камов
+  publish_date: June 7, 2021
+  avatar_url: images/sergey_kamov_avatar.png
+  twitter_id: apachenlpcraft
+  href_target: habr
+
+- title: Apache NLPCraft 0.8.0 Released
+  url: /relnotes/release-notes-0.8.0.html
+  excerpt: Download NLPCraft 0.8.0. Over 50 💪 fixes, improvements and enhancements.
+  publish_date: June 7, 2021
+  avatar_url: images/nlpcraft_logo.png
+  twitter_id: apachenlpcraft
+  href_target: _self
+
+- title: NLPCraft IDL - Intent Definition Language
+  url: /blogs/nlpcraft-idl-intent-definition-language.html
+  excerpt: The declarative Intent Definition Language, called NLPCraft IDL, significantly simplifies the process of
+    working with intents in NLP-based dialog and search...
+  author: Aaron Radzinski
+  publish_date: June 3, 2021
+  avatar_url: images/lion.jpg
+  twitter_id: aaron_radzinski
+  href_target: _self
+
+- title: Язык определения интентов NLPCraft IDL
+  url: https://habr.com/ru/post/559716/
+  excerpt: Новая версия декларативного языка определения интентов, получившая название NLPCraft IDL (NLPCraft Intents Definition Language), значительно упростила процесс работы с интентами...
+  author: Сергей Камов
+  publish_date: May 28, 2021
+  avatar_url: images/sergey_kamov_avatar.png
+  twitter_id: apachenlpcraft
+  href_target: habr
+
+- title: Apache NLPCraft 0.7.5 Released
+  url: /relnotes/release-notes-0.7.5.html
+  excerpt: Download NLPCraft 0.7.5. Over 50 💪 fixes, improvements and enhancements.
+  publish_date: April 30, 2021
+  avatar_url: images/nlpcraft_logo.png
+  twitter_id: apachenlpcraft
+  href_target: _self
+
+- title: Программируемые NER компоненты
+  url: https://habr.com/ru/post/543786/
+  excerpt: В данной заметке мы продолжим говорить о NER компонентах и попытаемся определить условия, в которых нам начинает недоставать функционала стандартных компонентов...
+  author: Сергей Камов
+  publish_date: February 25, 2021
+  avatar_url: images/sergey_kamov_avatar.png
+  twitter_id: apachenlpcraft
+  href_target: habr
+
+- title: Apache NLPCraft 0.7.4 Released
+  url: /relnotes/release-notes-0.7.4.html
+  excerpt: Download NLPCraft 0.7.4. Over 28 💪 fixes, improvements and enhancements.
+  publish_date: January 31, 2021
+  avatar_url: images/nlpcraft_logo.png
+  twitter_id: apachenlpcraft
+  href_target: _self
+
+- title: Поиск по синонимам в тексте — контролируем процесс или доверяемся нейросетям
+  url: https://habr.com/ru/post/539528/
+  excerpt: Первое что нужно сделать при разработке поисковых, диалоговых и прочих систем, основанных на natural language processing — это научиться разбирать тексты пользовательских запросов и находить в них сущности рабочей модели.
+  author: Сергей Камов
+  publish_date: January 28, 2021
+  avatar_url: images/sergey_kamov_avatar.png
+  twitter_id: apachenlpcraft
+  href_target: habr
+
+- title: Composable Named Entities
+  url: /blogs/composable_named_entities.html
+  excerpt: Most of the NLP tasks start with the basic challenge - how to find or detect something in the text...
+  author: Aaron Radzinski
+  publish_date: January 20, 2021
+  avatar_url: images/lion.jpg
+  twitter_id: aaron_radzinski
+  href_target: _self
+
+- title: Преобразование текстовых запросов в SQL
+  url: https://habr.com/ru/post/536720/
+  excerpt: На первый взгляд задача преобразования разобранного предложения в SQL — проблема чисто алгоритмическая...
+  author: Сергей Камов
+  publish_date: January 11, 2021
+  avatar_url: images/sergey_kamov_avatar.png
+  twitter_id: apachenlpcraft
+  href_target: habr
+
+- title: Apache NLPCraft 0.7.3 Released
+  url: /relnotes/release-notes-0.7.3.html
+  excerpt: Download NLPCraft 0.7.3. Over 20 💪 fixes, improvements and enhancements.
+  publish_date: December 31, 2020
+  avatar_url: images/nlpcraft_logo.png
+  twitter_id: apachenlpcraft
+  href_target: _self
+
+- title: Проектируем интенты с Apache NlpCraft
+  url: https://habr.com/ru/post/534034/
+  excerpt: Интент — это сочетание функции и правила, по которому эта функция должна быть вызвана...
+  author: Сергей Камов
+  publish_date: December 21, 2020
+  avatar_url: images/sergey_kamov_avatar.png
+  twitter_id: apachenlpcraft
+  href_target: habr
+
+- title: Как найти что-то в тексте
+  url: https://habr.com/ru/post/530878/
+  excerpt: Найти объект или распознать понятие в тексте — с этого начинается решение большинства NLP задач...
+  author: Сергей Камов
+  publish_date: December 1, 2020
+  avatar_url: images/sergey_kamov_avatar.png
+  twitter_id: apachenlpcraft
+  href_target: habr
+
+- title: Apache NLPCraft 0.7.2 Released
+  url: /relnotes/release-notes-0.7.2.html
+  excerpt: Download NLPCraft 0.7.2. Over 11 tickets fixed 💪 First full public release of the new <a href="/tools/script.html"><code>nlpcraft.{sh|cmd}</code></a> management utility.
+  publish_date: November 19, 2020
+  avatar_url: images/nlpcraft_logo.png
+  twitter_id: apachenlpcraft
+  href_target: _self
+
+- title: Quick Introduction to Apache NLPCraft
+  url: /blogs/quick_intro_apache_nlpcraft.html
+  excerpt: The goal of this project is unambiguously straightforward - provide an efficient & highly productive API to develop advanced NLP-based interfaces for modern applications.
+  author: Aaron Radzinski
+  avatar_url: images/lion.jpg
+  publish_date: November 16, 2020
+  twitter_id: aaron_radzinski
+  href_target: _self
+
+- title: Краткий обзор системы Apache NlpCraft
+  url: https://habr.com/ru/post/526950/
+  excerpt: Цель проекта - тотальное упрощение доступа к возможностям NLP разработчикам приложений. Уловить баланс между простотой вхождения в NLP проблематику и поддержкой широкого диапазона возможностей промышленной библиотеки.
+  author: Сергей Камов
+  publish_date: November 8, 2020
+  avatar_url: images/sergey_kamov_avatar.png
+  twitter_id: apachenlpcraft
+  href_target: habr
+
+- title: 📢 Apache NLPCraft 0.7.1 Released
+  url: /relnotes/release-notes-0.7.1.html
+  excerpt: Download NLPCraft 0.7.1. Over 19 tickets fixed 💪
+  publish_date: October 29, 2020
+  avatar_url: images/nlpcraft_logo.png
+  twitter_id: apachenlpcraft
+  href_target: _self
+
+- title: 📢 Apache NLPCraft 0.7.0 Released
+  url: /relnotes/release-notes-0.7.0.html
+  excerpt: Download NLPCraft 0.7.0. Lots of changes - JDK 11 support, model auto-validation and synonym suggestor based on BERT and FastText models 🎉
+  publish_date: September 29, 2020
+  avatar_url: images/nlpcraft_logo.png
+  twitter_id: apachenlpcraft
+  href_target: _self
+
+- title: Introducing Apache NLPCraft 0.5.0
+  url: https://medium.com/@aradzinski/introducing-apache-nlpcraft-0-5-open-source-api-to-convert-natural-language-into-actions-11d7536d0507
+  excerpt: Announcing the 1st release of the Apache NLPCraft 🔥🔥
+  author: Aaron Radzinksi
+  avatar_url: images/lion.jpg
+  publish_date: April 30, 2020
+  twitter_id: aaron_radzinski
+  href_target: medium
+
+- title: 📜 Short-Term Memory - Maintaining Conversation Context
+  url: /blogs/short_term_memory.html
+  excerpt: Short-Term Memory (STM), a technique used to maintain conversational context in NLPCraft. Maintaining the proper conversation context - remembering what the current conversation is about - is essential for all human interaction and thus essential for computer-based natural language understanding.
+  author: Aaron Radzinksi
+  avatar_url: images/lion.jpg
+  publish_date: July 26, 2019
+  twitter_id: aaron_radzinski
+  href_target: _self
